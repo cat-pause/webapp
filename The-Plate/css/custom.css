@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+
+
+.bg-greenbean{background-color: #7E8C24;}
+
+.banner-text{font-size: 1rem;}
+
+.only-pc a{
+    color:black;
+}
+.only-pc > li{
+    margin-left: 1rem;
+}
+#top-nav{
+    font-size: .875rem;
+}
+.main-logo{
+    width:320px;
+}
+
+@media screen and (max-width:576px){
+    html{font-size: 20px;}
+    #banner{
+        font-size: .875rem;
+    }
+}

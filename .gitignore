@@ -1,0 +1,5 @@
+
+*.html
+*.js
+bootstrap/
+META-INF/
