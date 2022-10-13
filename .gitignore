@@ -1,5 +1,7 @@
 
-*.html
-*.js
-bootstrap/
+javascript.html
+jquery.html
+jquerySelf.html
+
+
 META-INF/
