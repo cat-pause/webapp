@@ -1,0 +1,23 @@
+html{
+    font-size: 20px;
+    body{
+        font-size: .8rem;
+        height: 100vh;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .bg-salmon{
+        background-color: salmon;
+    }
+    .bg-yellowgreen{
+        background-color: yellowgreen;
+    }
+    h1{height: 200px;width:200px}
+    body>div{
+        height: 100vh;
+    }
+    button{
+        width:33%;
+        margin-top: 1rem;
+    }
+}

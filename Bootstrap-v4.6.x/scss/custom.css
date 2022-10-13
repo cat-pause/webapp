@@ -1,0 +1,27 @@
+html {
+  font-size: 20px;
+}
+html body {
+  font-size: 0.8rem;
+  height: 100vh;
+  line-height: 1.6;
+  text-align: center;
+}
+html .bg-salmon {
+  background-color: salmon;
+}
+html .bg-yellowgreen {
+  background-color: yellowgreen;
+}
+html h1 {
+  height: 200px;
+  width: 200px;
+}
+html body > div {
+  height: 100vh;
+}
+html button {
+  width: 33%;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=custom.css.map */
