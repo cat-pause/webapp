@@ -1,10 +1,64 @@
 @charset "utf-8";
+:root{
+    --greenbean : #7E8C24;
+    --text1 : #959595;
+    --red1 : #CD3232;
+    --gray1 : rgba(190,190,190,.3);
+    --gray2 : rgba(0,0,0,.5);
+}
 
 
+.bg-greenbean{
+    background-color: var(--greenbean);
+}
+.bg-text1{
+    background-color: var(--text1);
+}
+.bg-red1{
+    background-color: var(--red1);
+}
+.bg-gray2{
+    background-color: var(--gray2);
+}
+.text-black{
+    color: black;
+}
+.text-white{
+    color: #fff;
+}
+/* 검색창 오른쪽 마진 */
+.form-inline .form-control{
+    padding-right: 2.3rem;
+}
+button{
+    border:none;
+}
+.buttons button{
+    transform: scale(.9);
+}
 
-.bg-greenbean{background-color: #7E8C24;}
+/* main tabs */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: var(--greenbean);
+}
+.nav-pills .nav-link{
+    background-color: rgba(190,190,190,.3);
+}
 
-.banner-text{font-size: 1rem;}
+.main-title{
+    color:var(--text1);
+    font-size: .875rem;
+}
+.sub-title{
+    font-size: 1.5rem;
+}
+.banner-text{
+    text-align: center;
+    width:400px;
+    font-size: .875rem;
+    left:calc(50% - 200px);
+}
 
 .only-pc a{
     color:black;
@@ -19,6 +73,36 @@
     width:320px;
 }
 
+.carousel-item img{
+    object-fit: cover;
+}
+.badges{
+    margin-left:-3px;
+}
+.badge{
+    transform: scale(.9);
+    margin-right: -.2rem;
+}
+.customer h4{
+    font-size: .9rem;
+}
+/* aside */
+.news{
+    color:#fff;
+}
+.news span{
+    font-size: .75rem;
+}
+.move-top{
+    background-color:var(--gray2);
+    color:#fff;
+    font-size: .8rem;
+}
+/* @media screen and (min-width:768px){
+    .badge{
+        transform: scale(.7);
+    }
+} */
 @media screen and (max-width:576px){
     html{font-size: 20px;}
     #banner{
