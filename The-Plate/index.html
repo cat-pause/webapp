@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Plate</title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- 부트스트랩 icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- 커스텀 스타일 CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <h1 class="d-none">더 플레이팅</h1>
+
+    <div id="banner" class="container-fluid bg-greenbean text-white">
+        <div class="py-1 container mx-auto d-flex align-items-center justify-content-end position-relative">
+            <p class="banner-text my-3 text-align-center position-absolute">지금 플레이팅 가입하고 최대 10만원 쿠폰 받으세요 &gt;</p>
+            <button id="close-banner" type="button" class="border-0 bg-transparent text-white">
+                <i class="bi bi-x-lg" style="font-size:1rem"></i>
+            </button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container mx-auto">
+            <div class="header-top">
+                <ul id="top-nav" class="only-pc d-flex justify-content-end list-unstyled text-dark my-3">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="header-logo mt-5">
+                <div class="main-logo mx-auto">
+                    <img src="images/logo.svg" alt="the plating">
+                </div>
+            </div>
+            <div class="header-nav mt-5 mb-3">
+                <!-- 부트스트랩 navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active mr-2">
+                                <a class="nav-link" href="#"><i class="bi bi-list"></i></a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" href="#">그릇/홈세트 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" href="#">국내도자기그릇</a>
+                            </li>
+                            <li class="nav-item dropdown mr-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                수입주방용품
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">프랑스</a>
+                                    <a class="dropdown-item" href="#">이탈리아</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">해외직구</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">기타주방용품</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input id="search-input" class="form-control mr-sm-2 rounded-pill" type="search" placeholder="검색" aria-label="Search">
+                            <button class="btn my-2 my-sm-0 position-relative" style="left:-50px" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 부트스트랩 carousel -->
+    <div class="container-fluid px-0">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/hero1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hero2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hero3.jpg" class="d-block w-100" alt="...">
+                </div>
+                </div>
+          </div>
+    </div> 
+
+    <section id="main">
+
+        <h2 class="d-none">the plate product</h2>
+
+        <article>
+            <div class="container my-5">
+                <h3 class="main-title">건강한 밥상은</h3>
+                <p class="sub-title">플레이팅으로부터, 이제 바꿔보세요!</p>
+                <!-- 부트스트랩 Navs - Javascript Behavior - Pill -->
+                <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 mr-3 nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">그릇</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 mr-3 nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">홈세트</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">냄비</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <!-- 부트스트랩 Card Decks -->
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="images/set1-1.png" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">라움 4인 그릇 12P</h5>
+                                    <p class="card-text">89,500원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set1-2.png" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">라움 4인 그릇 10p</h5>
+                                    <p class="card-text">59,900원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set1-3.png" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">라움 6인 그릇 12p</h5>
+                                    <p class="card-text">128,500원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Decks 1 -->
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <!-- 부트스트랩 Card Decks 2 -->
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="images/set2-1.png" class="card-img-top" alt="홈세트">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set2-2.png" class="card-img-top" alt="홈세트">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set2-3.png" class="card-img-top" alt="홈세트">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Decks 2 -->
+                    </div> 
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <!-- 부트스트랩 Card Decks 3 -->
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="images/set3-1.png" class="card-img-top" alt="냄비">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set3-2.png" class="card-img-top" alt="냄비">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/set3-3.png" class="card-img-top" alt="냄비">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Decks 3 -->
+                    </div> <!-- End tab 3 -->
+                </div> <!-- tab contents -->
+            </div> <!-- container -->
+        </article>
+
+        <article>
+            <div class="container my-5">
+                <h3 class="main-title">혼밥족을 위한</h3>
+                <p class="sub-title">데일리 식기세트</p>
+                <!-- 부트스트랩 Navs - Javascript Behavior - Pill -->
+                <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 mr-3 nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">그릇</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 mr-3 nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">홈세트</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="rounded-pill px-5 nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">냄비</button>
+                    </li>
+                </ul> -->
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <!-- 부트스트랩 Card Decks -->
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="images/pp9.svg" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">뉴본차이나 화이트</h5>
+                                    <p class="card-text">28,500원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/pp8.svg" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">보타닉가든 접시</h5>
+                                    <p class="card-text">19,900원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/pp10.svg" class="card-img-top" alt="그릇">
+                                <div class="card-body">
+                                    <h5 class="card-title">데일리 식기 세트 4p</h5>
+                                    <p class="card-text">28,500원</p>
+                                    <div class="bb-wrap d-flex justify-content-between align-items-center">
+                                        <div class="badges d-flex">
+                                            <span class="badge badge-secondary bg-text1 text-black p-2">무료배송</span>
+                                            <span class="badge badge-danger bg-red1 py-2 px-3">특가</span>
+                                        </div>
+                                        <div class="buttons d-flex">
+                                            <button type="button" id="cart" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-basket2-fill"></i></button>
+                                            <button type="button" id="buy" class="btn btn-secondary bg-gray2 rounded-circle"><i class="bi bi-credit-card-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Decks 1 -->
+                    </div>
+                </div> <!-- tab contents -->
+            </div> <!-- container -->
+        </article>
+
+        <article>
+            <div class="container-fluid px-0">
+                <img src="images/BANNER.png" class="img-fluid" alt="카드사별 할부혜택">
+            </div>
+        </article>
+
+        <article>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="youtube col-md-6 col-sm">
+                        <div class="channel-info">
+                            <p class="info-title">더 플레이팅 TV <button class="border border-secondary rounded-circle"><i class="bi bi-chevron-right"></i></button></p>
+                            <p class="info-detail">
+                                도자기 그릇 플레이팅, 집밥 예쁘게 먹기,
+                                테이블 세팅 기술에 대한 모든것
+                            </p>
+                            <button>더 플레이팅 채널 구독하기</button>
+                        </div>
+                    </div>
+                    <div class="embed-video col-md-6 col-sm embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KLVaep27wSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div> <!-- row -->
+            </div>
+        </article>
+    </section>
+
+    <aside>
+        <div class="container-fluid bg-greenbean">
+            <div class="container p-0 d-flex justify-content-between align-items-center">
+                <div class="news"><i class="bi bi-volume-down-fill"></i><span>공지사항</span></div>
+                <div class="move-top"><i class="bi bi-chevron-up"></i></div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="customer">
+                        <h4>고객센터</h4>
+                        <p class="phone">1544-7000</p>
+                    </div>
+                    <div class="working">
+                        <p>평일, 토요일 09:00~17:00</p>
+                        <p>법정 공휴일 09:00~13:00 (일요일 휴무)</p>
+                    </div>
+                    <div class="kakao">
+                        <p>카카오톡 <strong>@더플레이팅</strong> 친구추가하고 소식과 혜택을 받아보세요</p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="brand">
+                        <h2>더 플레이팅</h2>
+                    </div>
+                    <address>
+                        사업자등록번호 : 211-81-08241 | 통신판매신고번호 : 제 2021-광주서구-0268 호
+                        개인정보보호책임자 : 최대한 | 개인정보 관리 이메일 :  admin@theplating.kr
+                    </address>
+                    <div class="copy">&copy; The Plating</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 부트스트랩 Script CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <!-- main.js 연결 -->
+    <script src="script/main.js"></script>
+</body>
+</html>
